@@ -3,9 +3,9 @@
     ════════════════════════════ */
  .hero-content {
      position: absolute;
-     top: 50%;
-     left: 44px;
-     transform: translateY(-52%);
+     top: 45%;
+     left: 10%;
+     transform: translateY(-42%);
      z-index: 10;
      max-width: 420px;
  }
@@ -16,52 +16,100 @@
  }
 
  .headline-upper {
-     font-family: 'Poppins', sans-serif;
-     font-size: clamp(52px, 5.5vw, 82px);
+     font-family: "Anton", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+     font-size: 72px;
      letter-spacing: 3px;
      display: block;
  }
 
  .headline-script {
-     font-family: 'Playfair Display', Georgia, serif;
+     font-family: "Coconut Beach Personal Use";
      font-style: italic;
-     font-size: clamp(46px, 5vw, 76px);
+     font-size: 120px;
      color: #e8c87a;
      font-weight: 400;
      display: block;
      line-height: 1.08;
-     margin-top: 4px;
+     margin-top: -34px;
  }
 
  .tagline {
-     color: rgba(255, 255, 255, 0.60);
-     font-size: 13px;
+     color: #ffffff;
+     font-size: 16px;
      font-weight: 400;
-     line-height: 1.75;
+     font-family: 'Poppins', sans-serif;
+     /* line-height: 1.75;
+     letter-spacing: 1px; */
      margin-top: 30px;
-     max-width: 300px;
+     /* max-width: 300px; */
+ }
+
+ .house-image-wrap {
+     position: absolute;
+     bottom: 0;
+     right: 8%;
+     width: 75%;
+     height: 88%;
+     z-index: 4;
+     padding: 1%;
+     overflow: visible;
+ }
+
+ .house-carousel,
+ .house-carousel .slick-list,
+ .house-carousel .slick-track {
+     height: 100% !important;
+     padding-top: 20px !important;
+ }
+
+ .house-carousel .slick-slide {
+     height: 100% !important;
+ }
+
+ .house-carousel .slick-slide>div {
+     height: 100%;
+ }
+
+ .house-slide {
+     display: flex !important;
+     align-items: flex-end;
+     justify-content: center;
+     height: 100%;
+     width: 100%;
+ }
+
+ .house-slide img {
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+     object-position: bottom center;
+     display: block;
  }
 
  /* ════════════════════════════
        STATS  — z-index 10
     ════════════════════════════ */
  .stats-row {
-     position: absolute;
-     bottom: 28px;
-     left: 44px;
-     z-index: 10;
+     position: static;
      display: flex;
      gap: 14px;
+     margin-top: 28px;
+     z-index: 10;
  }
 
  .stat-card {
-     background: rgba(12, 20, 12, 0.78);
-     backdrop-filter: blur(10px);
-     -webkit-backdrop-filter: blur(10px);
-     border: 0.5px solid rgba(255, 255, 255, 0.09);
+     background: rgba(255, 255, 255, 0.08);
+     backdrop-filter: blur(5px) saturate(140%);
+     -webkit-backdrop-filter: blur(16px) saturate(140%);
+     border: 1px solid rgba(255, 255, 255, 0.18);
      border-radius: 12px;
-     padding: 16px 24px;
-     min-width: 130px;
+     padding: 24px 24px;
+     min-width: 200px;
+     box-shadow:
+         0 4px 24px rgba(0, 0, 0, 0.25),
+         inset 0 1px 0 rgba(255, 255, 255, 0.15);
  }
 
  .stat-number {
@@ -80,60 +128,90 @@
      letter-spacing: 0.2px;
  }
 
- /* ════════════════════════════
-       RIGHT CTA PILLS  — z-index 10
-    ════════════════════════════ */
+ .tagline {
+     color: #ffffff;
+     font-size: 16px;
+     font-weight: 400;
+     font-family: 'Poppins', sans-serif;
+     margin-top: 25%;
+ }
+
+ /* =========================
+   RIGHT CTA BUTTONS
+========================= */
+
  .right-ctas {
      position: absolute;
-     right: 44px;
+     right: 10%;
      top: 50%;
      transform: translateY(-10%);
      z-index: 10;
+
      display: flex;
      flex-direction: column;
-     gap: 14px;
+     gap: 16px;
  }
 
  .btn-cta-pill {
-     background: #e8c87a;
-     color: #2a1f05;
-     border: none;
+     width: 240px;
+     height: 58px;
+
+     background: #ffffff;
+     border: 2px solid #ffffff;
      border-radius: 50px;
-     padding: 12px 14px 12px 24px;
-     font-family: 'Inter', sans-serif;
-     font-size: 13.5px;
-     font-weight: 500;
-     cursor: pointer;
+
+     padding: 4px;
+
      display: flex;
      align-items: center;
      justify-content: space-between;
-     gap: 16px;
-     min-width: 195px;
-     transition: background 0.2s, transform 0.15s;
+
+     cursor: pointer;
+
+     transition: transform .2s ease;
  }
 
  .btn-cta-pill:hover {
-     background: #f0d48d;
      transform: translateX(-4px);
  }
 
- .btn-cta-pill .arrow-circle {
-     width: 28px;
-     height: 28px;
-     background: rgba(42, 31, 5, 0.18);
-     border-radius: 50%;
+ .btn-cta-pill .btn-text {
+     flex: 1;
+     height: 100%;
+     background: #F3CF8E;
+     border-radius: 40px;
      display: flex;
      align-items: center;
      justify-content: center;
+
+     font-family: 'Poppins', sans-serif;
+     font-size: 16px;
+     font-weight: 600;
+     color: #000;
+ }
+
+ .btn-cta-pill .arrow-circle {
+     width: 48px;
+     height: 48px;
+
+     background: #ffffff;
+     border-radius: 50%;
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
      flex-shrink: 0;
  }
 
  .btn-cta-pill .arrow-circle svg {
-     width: 13px;
-     height: 13px;
-     stroke: #2a1f05;
-     stroke-width: 2.2;
+     width: 18px;
+     height: 18px;
      fill: none;
+     stroke: #F3CF8E;
+     stroke-width: 2;
+     stroke-linecap: round;
+     stroke-linejoin: round;
  }
 
  /* ════════════════════════════
@@ -197,14 +275,22 @@
      }
  }
 
+
  /* ══════════════════════════════════════
-       ONGOING PROJECTS SECTION
-    ══════════════════════════════════════ */
+     ONGOING PROJECTS SECTION
+  ══════════════════════════════════════ */
  .projects-section {
      width: 100%;
-     padding: 64px 0 56px;
+     padding: 10px 0 65px;
      background: #fff;
      overflow: hidden;
+
+ }
+
+ /* clips the left edge only; right side intentionally bleeds via slick-list overflow:visible */
+ .projects-slider-clip {
+     overflow: hidden;
+     width: 100%;
  }
 
  /* ── Section heading ── */
@@ -215,8 +301,9 @@
  }
 
  .section-head h2 {
-     font-size: 26px;
-     font-weight: 600;
+     font-family: 'Poppins', sans-serif;
+     font-size: 30px;
+     font-weight: 700;
      color: #1a1a1a;
      letter-spacing: 0.2px;
      margin-bottom: 10px;
@@ -236,25 +323,47 @@
      font-size: 14px;
  }
 
- /* ── Splide wrapper ── */
+ /* ── Slider wrapper ── */
  .projects-slider {
-     padding: 0 60px;
+     padding: 0 100px;
      position: relative;
+ }
+
+ .project-slide {
+     padding: 0 15px;
+ }
+
+ .projects-slider .slick-list {
+     overflow: visible;
+ }
+
+ .projects-slider .slick-track {
+     display: flex !important;
+ }
+
+ .projects-slider .slick-slide {
+     height: auto;
+     display: flex !important;
+     padding: 0 14px;
+ }
+
+ .projects-slider .slick-slide>div {
+     width: 100%;
  }
 
  /* ── Project Card ── */
  .project-card {
      background: #FCD79C;
-     border-radius: 20px;
+     border-radius: 24px;
      padding: 18px 18px 22px;
      display: flex;
      flex-direction: column;
-     gap: 0;
      height: 100%;
+     /* width: 100%; */
      box-sizing: border-box;
  }
 
- /* image container — rounded corners, fixed ratio */
+
  .card-img-wrap {
      width: 100%;
      aspect-ratio: 4 / 3;
@@ -262,6 +371,7 @@
      overflow: hidden;
      margin-bottom: 18px;
      flex-shrink: 0;
+     position: relative;
  }
 
  .card-img-wrap img {
@@ -277,7 +387,6 @@
      transform: scale(1.04);
  }
 
- /* card body */
  .card-body {
      display: flex;
      flex-direction: column;
@@ -286,20 +395,19 @@
  }
 
  .card-title {
-     font-size: 15.5px;
+     font-size: 22px;
      font-weight: 700;
      color: #1a1a1a;
-     line-height: 1.35;
+     line-height: 1.28;
  }
 
  .card-desc {
-     font-size: 13px;
-     color: #555;
-     line-height: 1.65;
+     font-size: 14.5px;
+     color: #4a4a4a;
+     line-height: 1.55;
      font-weight: 400;
  }
 
- /* price + button row */
  .card-footer {
      display: flex;
      align-items: center;
@@ -309,7 +417,8 @@
  }
 
  .card-price {
-     font-size: 26px;
+     font-family: 'Poppins', sans-serif;
+     font-size: 32px;
      font-weight: 700;
      color: #1a1a1a;
      letter-spacing: -0.5px;
@@ -321,14 +430,14 @@
      color: #1a1a1a;
      border: none;
      border-radius: 50px;
-     padding: 9px 14px 9px 20px;
+     padding: 9px 8px 9px 20px;
      font-family: 'Inter', sans-serif;
-     font-size: 13px;
-     font-weight: 500;
+     font-size: 14px;
+     font-weight: 600;
      cursor: pointer;
      display: flex;
      align-items: center;
-     gap: 8px;
+     gap: 10px;
      transition: background 0.2s, transform 0.15s;
      white-space: nowrap;
  }
@@ -339,8 +448,8 @@
  }
 
  .btn-view .arrow-circle {
-     width: 26px;
-     height: 26px;
+     width: 30px;
+     height: 30px;
      background: #FCD79C;
      border-radius: 50%;
      display: flex;
@@ -350,75 +459,111 @@
  }
 
  .btn-view .arrow-circle svg {
-     width: 11px;
-     height: 11px;
+     width: 12px;
+     height: 12px;
      stroke: #2a1f05;
      stroke-width: 2.2;
      fill: none;
  }
 
- /* ── Splide overrides ── */
-
- /* hide default splide pagination, we'll show it */
- .splide__pagination {
-     bottom: -38px;
- }
-
- .splide__pagination__page {
-     background: #d4b483;
-     width: 8px;
-     height: 8px;
-     border-radius: 50%;
-     opacity: 1;
-     margin: 0 4px;
-     transition: background 0.2s, transform 0.2s;
- }
-
- .splide__pagination__page.is-active {
-     background: #c89a3a;
-     transform: scale(1.25);
- }
-
- /* custom arrow buttons */
- .splide__arrow {
+ /* ══════════════════════════════════════
+     SLICK ARROW — visible mid-card, right edge
+  ══════════════════════════════════════ */
+ .slick-arrow {
+     position: absolute;
+     top: 35%;
+     width: 56px;
+     height: 56px;
+     z-index: 20;
+     cursor: pointer;
      background: transparent;
      border: none;
-     width: 36px;
-     height: 36px;
+     padding: 0;
+ }
+
+ .slick-arrow::before {
+     content: '';
+     display: block;
+     width: 100%;
+     height: 100%;
+     background: transparent;
+ }
+
+ .arrow-next-visual {
+     position: absolute;
+     top: 35%;
+     right: 6px;
+     transform: translateY(-50%);
+     width: 56px;
+     height: 56px;
+     border-radius: 50%;
+     background: rgba(0, 0, 0, 0.04);
      display: flex;
      align-items: center;
      justify-content: center;
-     cursor: pointer;
+     z-index: 19;
+     pointer-events: none;
+ }
+
+ .arrow-next-visual svg {
+     width: 22px;
+     height: 22px;
+     stroke: #e0a93e;
+     stroke-width: 2.2;
+     fill: none;
+ }
+
+ .slick-next {
+     right: -10px;
+ }
+
+ .slick-prev {
+     left: -10px;
+     opacity: 0;
+     pointer-events: none;
+ }
+
+ /* ── Pagination dots ── */
+ .slick-dots {
+     position: relative;
+     bottom: auto;
+     margin-top: 38px;
+     display: flex;
+     align-items: center;
+     bottom: -35px !important;
+     justify-content: center;
+     gap: 8px;
+     list-style: none;
+ }
+
+ .slick-dots li {
+     width: auto;
+     height: auto;
+     margin-top: 20px !important;
+ }
+
+ .slick-dots li button {
+     width: 20px !important;
+     height: 20px !important;
+     padding: 0;
+     border-radius: 50%;
+     background: #d9d9d9 !important;
+     border: none;
      opacity: 1;
-     top: 42%;
+     transition: background 0.2s, transform 0.2s;
  }
 
- .splide__arrow svg {
-     display: none;
-     /* hide default svg */
- }
-
- .splide__arrow::after {
+ .slick-dots li button::before {
      content: '';
-     display: block;
-     width: 14px;
-     height: 14px;
-     border-right: 2px solid #c89a3a;
-     border-top: 2px solid #c89a3a;
+     display: none;
  }
 
- .splide__arrow--prev::after {
-     transform: rotate(-135deg);
-     margin-left: 4px;
- }
-
- .splide__arrow--next::after {
-     transform: rotate(45deg);
-     margin-right: 4px;
- }
-
- .splide__arrow:disabled {
-     opacity: 0.3;
+ .slick-dots li.slick-active button {
+     background: #f0b94d !important;
+     transform: scale(1.0);
+     margin-top: 16px !important;
+     width: 20px !important;
+     height: 20px !important;
  }
 
  /* ── Responsive ── */
@@ -434,181 +579,181 @@
      }
 
      .section-head h2 {
-         font-size: 22px;
+         font-size: 24px;
+     }
+
+     .arrow-next-visual {
+         width: 44px;
+         height: 44px;
      }
  }
 
- /* ══════════════════════════════════
-           SERVICES SECTION
-        ══════════════════════════════════ */
  .services-section {
-     width: 100%;
-     padding: 56px 60px 70px;
+     /* padding: 30px 0 20px; */
      background: #fff;
-     overflow: hidden;
  }
 
- /* ── Section heading ── */
  .section-head {
      text-align: center;
-     margin-bottom: 64px;
+     margin-bottom: 25px;
  }
 
  .section-head h2 {
-     font-size: 28px;
-     font-weight: 700;
-     color: #1a1a1a;
-     margin-bottom: 12px;
+     font-size: 45px;
+     font-weight: 800;
+     color: #232323;
+     margin-bottom: 10px;
+     line-height: 1.1;
  }
 
  .section-head p {
-     font-size: 15px;
+     font-size: 22px;
      color: #555;
-     font-weight: 400;
+     margin: 0;
  }
 
- .section-head p strong {
+ .section-head strong {
      font-weight: 700;
-     color: #1a1a1a;
-     letter-spacing: 0.5px;
+     color: #222;
  }
 
- /* ══════════════════════════════════
-           THREE-COLUMN LAYOUT
-           Left col | Center image | Right col
-           Each side uses a sub-grid to place
-           items at top and bottom of the image
-        ══════════════════════════════════ */
  .services-layout {
+     max-width: 1600px;
+     margin: 0 auto;
+
      display: grid;
-     grid-template-columns: 1fr 340px 1fr;
-     gap: 0 0;
-     align-items: stretch;
+     grid-template-columns: 1fr 460px 1fr;
+
+     align-items: center;
  }
 
- /* ── Center building image ── */
- .services-center {
-     display: flex;
-     align-items: flex-end;
-     /* building sits on "ground" */
-     justify-content: center;
-     padding: 0 24px;
+ /* LEFT */
+
+ .services-left {
+     position: relative;
+     height: 620px;
  }
 
- .services-center img {
-     width: 100%;
-     max-width: 340px;
-     object-fit: contain;
-     display: block;
-     filter: drop-shadow(0 12px 40px rgba(0, 0, 0, 0.12));
+ .service-one {
+     position: absolute;
+     top: 110px;
+     right: 10px;
  }
 
- /* ── Left & Right columns ── */
- /*
-          The key insight from the screenshot:
-          Items are vertically distributed — item 1 is near the TOP,
-          item 2 is near the BOTTOM. We use flex with space-between
-          to push them apart, matching the building's height.
-        */
- .services-col {
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     /* top item top, bottom item bottom */
-     padding-top: 16px;
-     padding-bottom: 16px;
+ .service-two {
+     position: absolute;
+     bottom: 110px;
+     right: 10px;
  }
 
- /* ── Service item ── */
- .service-item {
+ /* RIGHT */
+
+ .services-right {
+     position: relative;
+     height: 620px;
+ }
+
+ .service-three {
+     position: absolute;
+     top: 95px;
+     left: 10px;
+ }
+
+ .service-four {
+     position: absolute;
+     bottom: 95px;
+     left: 10px;
+ }
+
+ /* BOX */
+
+ .service-box {
      display: flex;
      align-items: flex-start;
-     gap: 16px;
  }
 
- /* LEFT col: text on left, badge on right (inner edge toward building) */
- .services-col--left .service-item {
-     flex-direction: row-reverse;
-     /* badge right, text left */
+ .services-left .service-box {
      text-align: right;
-     padding-right: 0;
-     padding-left: 40px;
  }
 
- /* RIGHT col: badge on left (inner edge toward building), text on right */
- .services-col--right .service-item {
-     flex-direction: row;
+ .services-right .service-box {
      text-align: left;
-     padding-right: 40px;
-     padding-left: 0;
  }
 
- /* ── Number badge ── */
- .service-num {
-     width: 38px;
-     height: 38px;
-     min-width: 38px;
-     border-radius: 50%;
-     background: #e8c87a;
-     color: #2a1f05;
-     font-size: 14px;
+ .service-content {
+     width: 350px;
+ }
+
+ .service-content h3 {
+     font-size: 32px;
      font-weight: 700;
+     line-height: 1.15;
+     margin-bottom: 14px;
+     color: #333;
+ }
+
+ .service-content p {
+     font-size: 18px;
+     line-height: 1.55;
+     color: #555;
+ }
+
+ /* NUMBER */
+
+ .service-number {
+     width: 56px;
+     height: 56px;
+     min-width: 56px;
+
+     border-radius: 50%;
+     background: #e6c277;
+
      display: flex;
      align-items: center;
      justify-content: center;
-     flex-shrink: 0;
-     margin-top: 2px;
-     box-shadow: 0 2px 8px rgba(232, 200, 122, 0.35);
- }
 
- /* ── Service text ── */
- .service-title {
-     font-size: 15px;
+     font-size: 26px;
      font-weight: 700;
-     color: #1a1a1a;
-     line-height: 1.4;
-     margin-bottom: 8px;
+     color: #222;
  }
 
- .service-desc {
-     font-size: 13.5px;
-     color: #666;
-     line-height: 1.65;
-     font-weight: 400;
+ .services-left .service-number {
+     margin-left: 18px;
  }
 
- /* ── Responsive ── */
- @media (max-width: 900px) {
-     .services-section {
-         padding: 48px 24px 56px;
-     }
+ .services-right .service-number {
+     margin-right: 18px;
+ }
 
-     .services-layout {
-         grid-template-columns: 1fr;
-         gap: 40px 0;
-     }
+ /* CENTER */
 
-     .services-center {
-         order: -1;
-         padding: 0;
-     }
+ .services-center {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
 
-     .services-center img {
-         max-width: 260px;
-         margin: 0 auto;
-     }
+ .building-slider {
+     width: 100%;
+     height: 620px;
+ }
 
-     .services-col {
-         gap: 32px;
-     }
+ .building-slide {
+     height: 620px;
+     display: flex !important;
+     justify-content: center;
+     align-items: center;
+ }
 
-     .services-col--left .service-item,
-     .services-col--right .service-item {
-         flex-direction: row;
-         text-align: left;
-         padding-left: 0;
-         padding-right: 0;
-     }
+ .building-slide img {
+     width: 100%;
+     max-width: 420px;
+     display: block;
+ }
+
+ .building-slider .slick-track,
+ .building-slider .slick-list {
+     height: 100%;
  }
 
  .dream-section {

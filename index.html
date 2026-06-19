@@ -5,8 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
-        <!-- Splide CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,8 +20,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <link href="https://db.onlinewebfonts.com/c/26bc757f5ddeb57cbf8d6347ef4e2204?family=Coconut+Beach+Personal+Use"
+            rel="stylesheet">
     </head>
 
     <body>
@@ -32,8 +34,7 @@
 
                 <!-- LAYER 1: Forest BG -->
                 <div class="bg-forest" aria-hidden="true">
-                    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&auto=format&fit=crop&q=80"
-                        alt="" />
+                    <img src="./assets/images/banner-bg.png" alt="" />
                 </div>
 
                 <!-- LAYER 2: Gradient shades -->
@@ -42,30 +43,26 @@
                 <div class="shade-right" aria-hidden="true"></div>
                 <div class="shade-bottom" aria-hidden="true"></div>
 
-                <!-- LAYER 3: House -->
+                <!-- House Carousel -->
                 <div class="house-image-wrap">
-                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=960&auto=format&fit=crop&q=88"
-                        alt="Modern two-storey home with stone cladding and balcony" />
+                    <div class="house-carousel">
+                        <div class="house-slide">
+                            <img src="./assets/images/banner-img12.png"
+                                alt="Modern two-storey home with stone cladding and balcony" />
+                        </div>
+                        <div class="house-slide">
+                            <img src="./assets/images/banner-img2.png" alt="Luxury home exterior" />
+                        </div>
+                        <div class="house-slide">
+                            <img src="./assets/images/banner-img3.png" alt="Modern villa with pool" />
+                        </div>
+                    </div>
                 </div>
-
                 <header class="banner-header">
 
-                    <a href="#" class="logo-custom" aria-label="ILLU homepage">
-                        <div class="logo-graphic">
-                            <div class="roof"></div>
-                            <div class="pillars">
-                                <div class="line"></div>
-                                <div class="line"></div>
-                                <div class="line"></div>
-                            </div>
-                            <div class="base"></div>
-                            <div class="base-bottom"></div>
-                        </div>
-                        <div class="logo-text-group">
-                            <div class="logo-llu">LLU</div>
-                            <div class="logo-slogan">BUILDING DREAMS</div>
-                        </div>
-                    </a>
+                    <div class="logo-text-group">
+                        <img src="./assets/images/Website-logo.svg" alt="website-logo" />
+                    </div>
 
                     <nav class="nav-pill">
                         <ul class="nav-links">
@@ -76,11 +73,11 @@
                         </ul>
                     </nav>
 
-                    <button class="btn-contact" type="button">
-                        Contact
-                        <span class="arrow-circle" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 6L18 18M18 18V8M18 18H8" stroke-linecap="round" stroke-linejoin="round" />
+                    <button class="btn-contact">
+                        <span class="btn-text">Contact</span>
+                        <span class="arrow-circle">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M6 6L18 18M18 18V8M18 18H8" />
                             </svg>
                         </span>
                     </button>
@@ -90,269 +87,307 @@
                 <!-- ── Hero Text ── -->
                 <div class="hero-content">
                     <h1 class="headline">
-                        <span class="headline-upper">Building The</span>
+                        <span class="headline-upper">BUILDING THE</span>
                         <span class="headline-script">Future</span>
                     </h1>
-                    <p class="tagline">
-                        Build Beyond Walls, Create a Legacy.<br />
-                        Premium home construction crafted with<br />
-                        quality, precision, and timeless design.
+                    <div>
+                        <p class="tagline">
+                            Build Beyond Walls, Create a Legacy.<br />
+                            Premium home construction crafted with<br />
+                            quality, precision, and timeless design.
+                        </p>
+                        <!-- ── Stats ── -->
+                        <div class="stats-row" role="list" aria-label="Company stats">
+                            <div class="stat-card" role="listitem">
+                                <div class="stat-number">30+</div>
+                                <div class="stat-label">Years Active</div>
+                            </div>
+                            <div class="stat-card" role="listitem">
+                                <div class="stat-number">120+</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <aside class="right-ctas">
+
+                    <button class="btn-cta-pill">
+                        <span class="btn-text">Success Stories</span>
+
+                        <span class="arrow-circle">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M6 6L18 18M18 18V8M18 18H8" />
+                            </svg>
+                        </span>
+                    </button>
+
+                    <button class="btn-cta-pill">
+                        <span class="btn-text">Ongoing Project</span>
+
+                        <span class="arrow-circle">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M6 6L18 18M18 18V8M18 18H8" />
+                            </svg>
+                        </span>
+                    </button>
+
+                </aside>
+            </section>
+
+
+            <section class="projects-section" aria-labelledby="projects-heading">
+
+                <div class="section-head">
+                    <h2 class="projects-heading">Ongoing Projects</h2>
+                    <p><strong>ILLU</strong> Construction has been shaping the built environment for three decades.</p>
+                </div>
+
+                <div class="projects-slider">
+                    <div class="projects-carousel" aria-label="Ongoing projects carousel">
+
+                        <div class="project-slide">
+                            <div class="project-card">
+                                <div class="card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=700&auto=format&fit=crop&q=80"
+                                        alt="Luxury Villa exterior" />
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Luxury Villas / Duplex Construction</div>
+                                    <div class="card-desc">Build your dream luxury villa or duplex with our expert
+                                        construction services.</div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="card-price">29,2,222</div>
+                                    <button class="btn-view" type="button">
+                                        View More
+                                        <span class="arrow-circle" aria-hidden="true">
+                                            <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2 12L12 2M12 2H5M12 2v7" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-slide">
+                            <div class="project-card">
+                                <div class="card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&auto=format&fit=crop&q=80"
+                                        alt="Commercial building with modern facade" />
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Commercial Building Construction</div>
+                                    <div class="card-desc">We specialize in designing commercial spaces that are both
+                                        functional and visually striking.</div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="card-price">32,2,222</div>
+                                    <button class="btn-view" type="button">
+                                        View More
+                                        <span class="arrow-circle" aria-hidden="true">
+                                            <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2 12L12 2M12 2H5M12 2v7" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-slide">
+                            <div class="project-card">
+                                <div class="card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=700&auto=format&fit=crop&q=80"
+                                        alt="Residential development complex" />
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Development Services</div>
+                                    <div class="card-desc">Our development services encompass residential communities,
+                                        commercial complexes, and mixed-use spaces.</div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="card-price">13,2,222</div>
+                                    <button class="btn-view" type="button">
+                                        View More
+                                        <span class="arrow-circle" aria-hidden="true">
+                                            <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2 12L12 2M12 2H5M12 2v7" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-slide">
+                            <div class="project-card">
+                                <div class="card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&auto=format&fit=crop&q=80"
+                                        alt="Modern minimalist home" />
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Premium Home Design</div>
+                                    <div class="card-desc">Timeless architecture blended with modern interiors crafted
+                                        to your exact specifications.</div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="card-price">45,5,000</div>
+                                    <button class="btn-view" type="button">
+                                        View More
+                                        <span class="arrow-circle" aria-hidden="true">
+                                            <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2 12L12 2M12 2H5M12 2v7" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-slide">
+                            <div class="project-card">
+                                <div class="card-img-wrap">
+                                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=700&auto=format&fit=crop&q=80"
+                                        alt="Elegant residence at dusk" />
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-title">Turnkey Residential Projects</div>
+                                    <div class="card-desc">End-to-end construction from foundation to finishing,
+                                        delivered on time and within budget.</div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="card-price">22,8,500</div>
+                                    <button class="btn-view" type="button">
+                                        View More
+                                        <span class="arrow-circle" aria-hidden="true">
+                                            <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M2 12L12 2M12 2H5M12 2v7" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- visual ring behind the next arrow, purely decorative -->
+                    <!-- <div class="arrow-next-visual" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div> -->
+                </div>
+
+            </section>
+
+            <section class="services-section">
+
+                <div class="section-head">
+                    <h2>Our Specialized Services</h2>
+                    <p>
+                        <strong>ILLU</strong> Construction has been shaping the built environment for three decades.
                     </p>
                 </div>
 
-                <!-- ── Stats ── -->
-                <div class="stats-row" role="list" aria-label="Company stats">
-                    <div class="stat-card" role="listitem">
-                        <div class="stat-number">30+</div>
-                        <div class="stat-label">Years Active</div>
-                    </div>
-                    <div class="stat-card" role="listitem">
-                        <div class="stat-number">120+</div>
-                        <div class="stat-label">Projects</div>
-                    </div>
-                </div>
-
-                <!-- ── Right CTA Pills ── -->
-                <aside class="right-ctas" aria-label="Quick links">
-                    <button class="btn-cta-pill" type="button">
-                        Success Stories
-                        <span class="arrow-circle" aria-hidden="true">
-                            <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 12L12 2M12 2H5M12 2v7" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </span>
-                    </button>
-                    <button class="btn-cta-pill" type="button">
-                        Ongoing Project
-                        <span class="arrow-circle" aria-hidden="true">
-                            <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 12L12 2M12 2H5M12 2v7" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </span>
-                    </button>
-                </aside>
-
-            </section>
-            <section class="projects-section" aria-labelledby="projects-heading">
-
-                <!-- Heading -->
-                <div class="section-head">
-                    <h2 id="projects-heading">Ongoing Projects</h2>
-                    <p><strong>ILLU</strong> Construction has been shaping the built environment for three decades.</p>
-                </div>
-
-                <!-- Slider -->
-                <div class="projects-slider">
-                    <div class="splide" id="projectsSlider" aria-label="Ongoing projects carousel">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-
-                                <!-- Card 1 -->
-                                <li class="splide__slide">
-                                    <div class="project-card">
-                                        <div class="card-img-wrap">
-                                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=700&auto=format&fit=crop&q=80"
-                                                alt="Luxury Villa exterior" />
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="card-title">Luxury Villas / Duplex Construction</div>
-                                            <div class="card-desc">Build your dream luxury villa or duplex with our
-                                                expert construction services.</div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="card-price">29,2,222</div>
-                                            <button class="btn-view" type="button">
-                                                View More
-                                                <span class="arrow-circle" aria-hidden="true">
-                                                    <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M2 12L12 2M12 2H5M12 2v7" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <!-- Card 2 -->
-                                <li class="splide__slide">
-                                    <div class="project-card">
-                                        <div class="card-img-wrap">
-                                            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&auto=format&fit=crop&q=80"
-                                                alt="Commercial building with modern facade" />
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="card-title">Commercial Building Construction</div>
-                                            <div class="card-desc">We specialize in designing commercial spaces that are
-                                                both functional and visually striking.</div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="card-price">32,2,222</div>
-                                            <button class="btn-view" type="button">
-                                                View More
-                                                <span class="arrow-circle" aria-hidden="true">
-                                                    <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M2 12L12 2M12 2H5M12 2v7" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <!-- Card 3 -->
-                                <li class="splide__slide">
-                                    <div class="project-card">
-                                        <div class="card-img-wrap">
-                                            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=700&auto=format&fit=crop&q=80"
-                                                alt="Residential development complex" />
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="card-title">Development Services</div>
-                                            <div class="card-desc">Our development services encompass residential
-                                                communities, commercial complexes, and mixed-use spaces.</div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="card-price">13,2,222</div>
-                                            <button class="btn-view" type="button">
-                                                View More
-                                                <span class="arrow-circle" aria-hidden="true">
-                                                    <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M2 12L12 2M12 2H5M12 2v7" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <!-- Card 4 -->
-                                <li class="splide__slide">
-                                    <div class="project-card">
-                                        <div class="card-img-wrap">
-                                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&auto=format&fit=crop&q=80"
-                                                alt="Modern minimalist home" />
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="card-title">Premium Home Design</div>
-                                            <div class="card-desc">Timeless architecture blended with modern interiors
-                                                crafted to your exact specifications.</div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="card-price">45,5,000</div>
-                                            <button class="btn-view" type="button">
-                                                View More
-                                                <span class="arrow-circle" aria-hidden="true">
-                                                    <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M2 12L12 2M12 2H5M12 2v7" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <!-- Card 5 -->
-                                <li class="splide__slide">
-                                    <div class="project-card">
-                                        <div class="card-img-wrap">
-                                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=700&auto=format&fit=crop&q=80"
-                                                alt="Elegant residence at dusk" />
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="card-title">Turnkey Residential Projects</div>
-                                            <div class="card-desc">End-to-end construction from foundation to finishing,
-                                                delivered on time and within budget.</div>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="card-price">22,8,500</div>
-                                            <button class="btn-view" type="button">
-                                                View More
-                                                <span class="arrow-circle" aria-hidden="true">
-                                                    <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M2 12L12 2M12 2H5M12 2v7" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div><!-- /.projects-slider -->
-
-            </section>
-
-            <section class="services-section" aria-labelledby="services-heading">
-
-                <!-- Heading -->
-                <div class="section-head">
-                    <h2 id="services-heading">Our Specialized Services</h2>
-                    <p><strong>ILLU</strong> Construction has been shaping the built environment for three decades.</p>
-                </div>
-
-                <!-- Three-column layout -->
                 <div class="services-layout">
 
-                    <!-- LEFT column: items 1 & 2 -->
-                    <div class="services-col services-col--left">
+                    <!-- LEFT -->
 
-                        <div class="service-item">
-                            <div class="service-num" aria-hidden="true">1</div>
-                            <div class="service-text">
-                                <div class="service-title">Luxury Villas / Duplex<br />Construction</div>
-                                <div class="service-desc">Build your dream luxury villa or<br />duplex with our
-                                    expert<br />construction services.</div>
+                    <div class="services-left">
+
+                        <div class="service-box service-one">
+
+                            <div class="service-content">
+                                <h3>Luxury Villas / Duplex Construction</h3>
+                                <p>
+                                    Build your dream luxury villa or duplex with our expert construction services.
+                                </p>
                             </div>
+
+                            <span class="service-number">1</span>
+
                         </div>
 
-                        <div class="service-item">
-                            <div class="service-num" aria-hidden="true">2</div>
-                            <div class="service-text">
-                                <div class="service-title">Commercial Building<br />Construction</div>
-                                <div class="service-desc">We specialize in designing<br />commercial spaces that
-                                    are<br />both functional and inspiring.</div>
+                        <div class="service-box service-two">
+
+                            <div class="service-content">
+                                <h3>Commercial Building Construction</h3>
+                                <p>
+                                    We specialize in designing commercial spaces that are both functional and inspiring.
+                                </p>
                             </div>
+
+                            <span class="service-number">2</span>
+
                         </div>
 
                     </div>
 
-                    <!-- CENTER: building image -->
+                    <!-- CENTER -->
+
                     <div class="services-center">
-                        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&auto=format&fit=crop&q=85"
-                            alt="Modern multi-storey commercial building" />
-                    </div>
 
-                    <!-- RIGHT column: items 3 & 4 -->
-                    <div class="services-col services-col--right">
+                        <div class="building-slider">
 
-                        <div class="service-item">
-                            <div class="service-num" aria-hidden="true">3</div>
-                            <div class="service-text">
-                                <div class="service-title">Commercial Building<br />Construction</div>
-                                <div class="service-desc">We specialize in designing<br />commercial spaces that
-                                    are<br />both functional and inspiring.</div>
+                            <div class="building-slide">
+                                <img src="./assets/images/banner-img1.png" alt="">
                             </div>
-                        </div>
 
-                        <div class="service-item">
-                            <div class="service-num" aria-hidden="true">4</div>
-                            <div class="service-text">
-                                <div class="service-title">Commercial Building<br />Construction</div>
-                                <div class="service-desc">We specialize in designing<br />commercial spaces that
-                                    are<br />both functional and inspiring.</div>
+                            <div class="building-slide">
+                                <img src="./assets/images/banner-img2.png" alt="">
                             </div>
+
+                            <div class="building-slide">
+                                <img src="./assets/images/banner-img3.png" alt="">
+                            </div>
+
                         </div>
 
                     </div>
 
-                </div><!-- /.services-layout -->
+                    <!-- RIGHT -->
+
+                    <div class="services-right">
+
+                        <div class="service-box service-three">
+
+                            <span class="service-number">3</span>
+
+                            <div class="service-content">
+                                <h3>Commercial Building Construction</h3>
+                                <p>
+                                    We specialize in designing commercial spaces that are both functional and inspiring.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="service-box service-four">
+
+                            <span class="service-number">4</span>
+
+                            <div class="service-content">
+                                <h3>Commercial Building Construction</h3>
+                                <p>
+                                    We specialize in designing commercial spaces that are both functional and inspiring.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </section>
             <section class="dream-section">
@@ -820,334 +855,48 @@
                 </div>
 
             </footer>
-
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                // ── Init Splide (RTL = right-to-left slide direction) 
-                var splide = new Splide('#bgCarousel', {
-                    type: 'loop',
-                    direction: 'ltr',       // slides move left to right 
-                    autoplay: true,
-                    interval: 4000,
-                    speed: 1000,
-                    easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-                    pauseOnHover: false,
-                    arrows: false,
-                    pagination: false,
-                    reducedMotion: {
-                        speed: 0,
-                        autoplay: false,
-                    },
-                });
-
-                // ── Build custom dots ──
-                var dotsContainer = document.getElementById('carouselDots');
-                var slideCount = 4; // match number of slides above
-
-                for (var i = 0; i < slideCount; i++) {
-                    var btn = document.createElement('button');
-                    btn.setAttribute('role', 'tab');
-                    btn.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-                    btn.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
-                    if (i === 0) btn.classList.add('active');
-
-                    (function (index) {
-                        btn.addEventListener('click', function () {
-                            splide.go(index);
-                        });
-                    })(i);
-
-                    dotsContainer.appendChild(btn);
-                }
-
-                // ── Sync dots with carousel ──
-                splide.on('moved', function (newIndex) {
-                    var dots = dotsContainer.querySelectorAll('button');
-                    dots.forEach(function (d, i) {
-                        var isActive = i === newIndex;
-                        d.classList.toggle('active', isActive);
-                        d.setAttribute('aria-selected', isActive ? 'true' : 'false');
-                    });
-                });
-
-                splide.mount();
+            $('.house-carousel').slick({
+                autoplay: true,
+                autoplaySpeed: 500,
+                adaptiveHeight: false,
+                speed: 1000,
+                infinite: true,
+                arrows: false,
+                dots: false
             });
-        </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                new Splide('#projectsSlider', {
-                    type: 'loop',
-                    perPage: 3,
-                    perMove: 1,
-                    gap: '22px',
-                    pagination: true,
-                    arrows: true,
-                    autoplay: false,
-                    breakpoints: {
-                        900: { perPage: 2 },
-                        600: { perPage: 1 },
-                    },
-                }).mount();
-            });
-
-            $('.testimonial-slider').slick({
-                slidesToShow: 4,
+            $('.building-slider').slick({
+                slidesToShow: 1,
                 slidesToScroll: 1,
+                arrows: false,
+                dots: false,
                 infinite: true,
                 autoplay: true,
                 autoplaySpeed: 2500,
-                arrows: false,
-                dots: false,
-                responsive: [
-                    {
-                        breakpoint: 1200,
-                        settings: {
-                            slidesToShow: 3
-                        }
-                    },
-                    {
-                        breakpoint: 992,
-                        settings: {
-                            slidesToShow: 2
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1
-                        }
-                    }
-                ]
+                fade: true,
+                speed: 800
             });
-
-            $('.success-slider').slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                infinite: true,
-                autoplay: true,
-                autoplaySpeed: 3000,
-                arrows: false,
-                dots: false,
-                responsive: [
-                    {
-                        breakpoint: 992,
-                        settings: {
-                            slidesToShow: 2
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1
-                        }
-                    }
-                ]
-            });
-        </script>
-        <script>
-            $(function () {
-                // Scroll-triggered fade-in for service items
-                function revealOnScroll() {
-                    $('.service-item').each(function () {
-                        var itemTop = $(this).offset().top;
-                        var windowBottom = $(window).scrollTop() + $(window).height();
-                        if (itemTop < windowBottom - 40) {
-                            $(this).addClass('visible');
-                        }
-                    });
-                }
-
-                // Initial styles for animation
-                $('.service-item').css({ opacity: 0, transform: 'translateY(18px)', transition: 'opacity 0.5s ease, transform 0.5s ease' });
-
-                // CSS class to trigger
-                $('<style>.service-item.visible { opacity: 1 !important; transform: translateY(0) !important; }</style>').appendTo('head');
-
-                $(window).on('scroll', revealOnScroll);
-                revealOnScroll(); // run on load
-
-                // Badge hover pop
-                $('.service-num').on('mouseenter', function () {
-                    $(this).stop(true).animate({}, 150);
-                    $(this).css({ transform: 'scale(1.15)', transition: 'transform 0.2s ease' });
-                }).on('mouseleave', function () {
-                    $(this).css({ transform: 'scale(1)', transition: 'transform 0.2s ease' });
+            // Projects section
+            $(document).ready(function () {
+                $('.projects-carousel').slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    centerMode: true,
+                    centerPadding: '120px',
+                    dots: true,
+                    arrows: false
                 });
             });
         </script>
-        <script>
-            $(function () {
-                // Subtle parallax drift on partial images while scrolling
-                $(window).on('scroll', function () {
-                    var scrollY = $(window).scrollTop();
-                    var offset = scrollY * 0.04;
-                    $('.gallery-item--left-partial img').css('transform', 'translateX(-' + offset + 'px)');
-                    $('.gallery-item--right-partial img').css('transform', 'translateX(' + offset + 'px)');
-                });
-
-                // Before/After hover lift
-                $('.ba-card').on('mouseenter', function () {
-                    $(this).css({ transform: 'scale(1.025)', transition: 'transform 0.3s ease' });
-                }).on('mouseleave', function () {
-                    $(this).css({ transform: 'scale(1)', transition: 'transform 0.3s ease' });
-                });
-
-                // Center image hover lift
-                $('.gallery-item--center').on('mouseenter', function () {
-                    $(this).css({ transform: 'scale(1.015)', transition: 'transform 0.35s ease' });
-                }).on('mouseleave', function () {
-                    $(this).css({ transform: 'scale(1)', transition: 'transform 0.35s ease' });
-                });
-            });
-        </script>
-
-        <script>
-            $(function () {
-                // Subtle entrance: card fades up on load
-                $('.about-card').css({ opacity: 0, transform: 'translateY(20px)' });
-                setTimeout(function () {
-                    $('.about-card').animate({ opacity: 1 }, {
-                        duration: 600,
-                        step: function (now) {
-                            var y = 20 * (1 - now);
-                            $(this).css('transform', 'translateY(' + y + 'px)');
-                        }
-                    });
-                }, 150);
-
-                // Button hover: icon spin nudge
-                $('.about-card__btn').on('mouseenter', function () {
-                    $(this).find('.about-card__btn-icon').css({
-                        transform: 'rotate(15deg)',
-                        transition: 'transform 0.25s ease'
-                    });
-                }).on('mouseleave', function () {
-                    $(this).find('.about-card__btn-icon').css({
-                        transform: 'rotate(0deg)',
-                        transition: 'transform 0.25s ease'
-                    });
-                });
-            });
-        </script>
-        <script>
-            $(function () {
-
-                // Staggered scroll-in for feature cards
-                $('.diff-card').css({ opacity: 0, transform: 'translateX(-24px)' });
-
-                function revealCards() {
-                    $('.diff-card').each(function (i) {
-                        var top = $(this).offset().top;
-                        var winBottom = $(window).scrollTop() + $(window).height();
-                        if (top < winBottom - 30) {
-                            var $card = $(this);
-                            setTimeout(function () {
-                                $card.css({ transition: 'opacity 0.5s ease, transform 0.5s ease', opacity: 1, transform: 'translateX(0)' });
-                            }, i * 120);
-                        }
-                    });
-                }
-
-                $(window).on('scroll', revealCards);
-                revealCards();
-
-                // Card hover lift
-                $('.diff-card').on('mouseenter', function () {
-                    $(this).css({ transform: 'translateY(-3px)', transition: 'transform 0.25s ease', boxShadow: '0 8px 28px rgba(249,201,106,0.35)' });
-                }).on('mouseleave', function () {
-                    $(this).css({ transform: 'translateY(0)', transition: 'transform 0.25s ease', boxShadow: 'none' });
-                });
-
-            });
-        </script>
-
-        <script>
-            $(function () {
-
-                // Staggered card entrance on scroll
-                $('.stories-card').css({ opacity: 0, transform: 'translateY(20px)' });
-
-                function revealCards() {
-                    $('.stories-card').each(function (i) {
-                        var top = $(this).offset().top;
-                        var winBottom = $(window).scrollTop() + $(window).height();
-                        if (top < winBottom - 20) {
-                            var $card = $(this);
-                            setTimeout(function () {
-                                $card.css({
-                                    transition: 'opacity 0.5s ease, transform 0.5s ease',
-                                    opacity: 1,
-                                    transform: 'translateY(0)'
-                                });
-                            }, i * 100);
-                        }
-                    });
-                }
-
-                $(window).on('scroll', revealCards);
-                revealCards();
-
-                // Image hover scale
-                $('.stories-card').on('mouseenter', function () {
-                    $(this).find('.stories-card__img').css({
-                        transform: 'scale(1.03)',
-                        transition: 'transform 0.35s ease'
-                    });
-                }).on('mouseleave', function () {
-                    $(this).find('.stories-card__img').css({
-                        transform: 'scale(1)',
-                        transition: 'transform 0.35s ease'
-                    });
-                });
-
-            });
-        </script>
-
-        <script>
-            $(function () {
-
-                // Drag-to-scroll on the track
-                var $wrap = $('.testi-track-wrap');
-                var isDrag = false;
-                var startX = 0;
-                var scrollL = 0;
-
-                $wrap.on('mousedown', function (e) {
-                    isDrag = true;
-                    startX = e.pageX - $wrap.offset().left;
-                    scrollL = $wrap.scrollLeft();
-                    $wrap.css('cursor', 'grabbing');
-                });
-
-                $(document).on('mouseup', function () {
-                    isDrag = false;
-                    $wrap.css('cursor', 'grab');
-                });
-
-                $wrap.on('mousemove', function (e) {
-                    if (!isDrag) return;
-                    e.preventDefault();
-                    var x = e.pageX - $wrap.offset().left;
-                    var walk = (x - startX) * 1.2;
-                    $wrap.scrollLeft(scrollL - walk);
-                });
-
-                $wrap.css('cursor', 'grab');
-
-                // Touch scroll already native — no override needed
-
-                // Card hover lift
-                $('.testi-card').on('mouseenter', function () {
-                    $(this).css({ transform: 'translateY(-4px)', transition: 'transform 0.25s ease', boxShadow: '0 10px 32px rgba(249,201,106,0.45)' });
-                }).on('mouseleave', function () {
-                    $(this).css({ transform: 'translateY(0)', transition: 'transform 0.25s ease', boxShadow: 'none' });
-                });
-
-            });
-        </script>
-
     </body>
 
 </html>

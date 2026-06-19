@@ -40,93 +40,61 @@
      object-fit: cover;
      object-position: center 30%;
      display: block;
-     filter: brightness(0.38) saturate(0.65);
+     /* filter removed — source image already has natural light/dark balance */
  }
 
- /* ── LAYER 2: Dark gradient overlays ── */
-
- /* top bar darkening — for header readability */
- .shade-top {
+ /* ── LAYER 2: Gradient shades ── */
+ .shade-top,
+ .shade-left,
+ .shade-right,
+ .shade-bottom {
      position: absolute;
+     z-index: 2;
+     pointer-events: none;
+ }
+
+ .shade-left {
+     top: 0;
+     left: 0;
+     bottom: 0;
+     width: 45%;
+     background: linear-gradient(90deg,
+             rgba(0, 0, 0, 0.95) 0%,
+             rgba(0, 0, 0, 0.85) 40%,
+             rgba(0, 0, 0, 0.5) 75%,
+             rgba(0, 0, 0, 0) 100%);
+ }
+
+ .shade-right {
+     top: 0;
+     right: 0;
+     bottom: 0;
+     width: 45%;
+     background: linear-gradient(270deg,
+             rgba(0, 0, 0, 0.95) 0%,
+             rgba(0, 0, 0, 0.85) 40%,
+             rgba(0, 0, 0, 0.5) 75%,
+             rgba(0, 0, 0, 0) 100%);
+ }
+
+ .shade-top {
      top: 0;
      left: 0;
      right: 0;
-     height: 180px;
-     z-index: 2;
-     pointer-events: none;
-     background: linear-gradient(to bottom,
-             rgba(3, 8, 3, 0.96) 0%,
-             rgba(3, 8, 3, 0.60) 55%,
-             transparent 100%);
+     height: 22%;
+     background: linear-gradient(180deg,
+             rgba(0, 0, 0, 0.55) 0%,
+             rgba(0, 0, 0, 0) 100%);
  }
 
- /* left side — headline area is fully dark */
- .shade-left {
-     position: absolute;
-     inset: 0;
-     z-index: 2;
-     pointer-events: none;
-     background: linear-gradient(to right,
-             rgba(3, 8, 3, 1.00) 0%,
-             rgba(3, 8, 3, 0.96) 15%,
-             rgba(3, 8, 3, 0.82) 28%,
-             rgba(3, 8, 3, 0.50) 42%,
-             rgba(3, 8, 3, 0.15) 55%,
-             transparent 68%);
- }
-
- /* right side darkening */
- .shade-right {
-     position: absolute;
-     inset: 0;
-     z-index: 2;
-     pointer-events: none;
-     background: linear-gradient(to left,
-             rgba(3, 8, 3, 0.96) 0%,
-             rgba(3, 8, 3, 0.72) 14%,
-             rgba(3, 8, 3, 0.28) 28%,
-             transparent 44%);
- }
-
- /* bottom ground fade */
  .shade-bottom {
-     position: absolute;
      bottom: 0;
      left: 0;
      right: 0;
-     height: 220px;
-     z-index: 2;
-     pointer-events: none;
-     background: linear-gradient(to top,
-             rgba(3, 8, 3, 0.90) 0%,
-             rgba(3, 8, 3, 0.40) 50%,
-             transparent 100%);
- }
-
- /* ── LAYER 3: Center house image ── */
- .house-image-wrap {
-     position: absolute;
-     left: 50%;
-     transform: translateX(-46%);
-     /* slightly right of center like in design */
-     bottom: 0;
-     z-index: 4;
-     width: 44%;
-     max-width: 700px;
-     min-width: 300px;
- }
-
- .house-image-wrap img {
-     width: 100%;
-     display: block;
-     -webkit-mask-image: linear-gradient(to top,
-             transparent 0%,
-             rgba(0, 0, 0, 0.4) 6%,
-             black 16%);
-     mask-image: linear-gradient(to top,
-             transparent 0%,
-             rgba(0, 0, 0, 0.4) 6%,
-             black 16%);
+     height: 30%;
+     background: linear-gradient(0deg,
+             rgba(0, 0, 0, 0.7) 0%,
+             rgba(0, 0, 0, 0) 100%);
  }
 
  /* ════════════════════════════
@@ -138,7 +106,7 @@
      display: flex;
      align-items: center;
      justify-content: space-between;
-     padding: 0 45px;
+     padding: 0 10%;
      height: 80px;
      /* Explicit height to align items */
      width: 100%;
@@ -240,8 +208,8 @@
      display: flex;
      align-items: center;
      background: linear-gradient(180deg, #f4f4f4 0%, #e9e9e9 50%, #dcdcdc 100%);
-     border-bottom-left-radius: 38px;
-     border-bottom-right-radius: 38px;
+     border-bottom-left-radius: 45px;
+     border-bottom-right-radius: 45px;
      box-shadow:
          inset 0 1px 0 rgba(255, 255, 255, .9),
          0 4px 12px rgba(0, 0, 0, .12);
@@ -307,48 +275,68 @@
      opacity: 0.7;
  }
 
- /* ════════════════════════════
-       CONTACT BUTTON
-    ════════════════════════════ */
+ /* =========================
+   CONTACT BUTTON
+========================= */
+
  .btn-contact {
-     background: #f9d191;
-     /* Accurate peach-orange */
-     color: #000;
-     border: none;
+     width: 220px;
+     height: 58px;
+
+     background: #ffffff;
+     border: 2px solid #ffffff;
      border-radius: 50px;
-     padding: 6px 6px 6px 24px;
-     font-family: 'Inter', sans-serif;
-     font-size: 16px;
-     font-weight: 500;
-     cursor: pointer;
+
+     padding: 4px;
+
      display: flex;
      align-items: center;
-     gap: 14px;
-     transition: background 0.2s, transform 0.15s;
+     justify-content: space-between;
+
+     cursor: pointer;
  }
 
- .btn-contact:hover {
-     background: #fce2b8;
-     transform: translateY(-1px);
+ .btn-contact .btn-text {
+     flex: 1;
+
+     height: 100%;
+
+     background: #F3CF8E;
+     border-radius: 40px;
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     font-family: 'Poppins', sans-serif;
+     font-size: 16px;
+     font-weight: 600;
+     color: #000;
  }
 
  .btn-contact .arrow-circle {
      width: 38px;
      height: 38px;
+
      background: #ffffff;
      border-radius: 50%;
+
      display: flex;
      align-items: center;
      justify-content: center;
+
+     flex-shrink: 0;
  }
 
  .btn-contact .arrow-circle svg {
-     width: 14px;
-     height: 14px;
-     stroke: #f9d191;
-     /* Arrow color matches button background */
-     stroke-width: 2.2;
+     width: 18px;
+     height: 18px;
+
      fill: none;
+     stroke: #F3CF8E;
+     stroke-width: 2;
+     stroke-linecap: round;
+     stroke-linejoin: round;
  }
 
  /* ══════════════════════════════════
