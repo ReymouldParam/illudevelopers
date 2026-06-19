@@ -302,17 +302,18 @@
 
  .section-head h2 {
      font-family: 'Poppins', sans-serif;
-     font-size: 30px;
+     font-size: 45px;
      font-weight: 700;
      color: #1a1a1a;
      letter-spacing: 0.2px;
      margin-bottom: 10px;
+
  }
 
  .section-head p {
-     font-size: 15px;
+     font-size: 22px;
      color: #555;
-     font-weight: 400;
+     margin: 0;
  }
 
  .section-head p strong {
@@ -593,23 +594,26 @@
      background: #fff;
  }
 
- .section-head {
+ .service-head {
      text-align: center;
      margin-bottom: 25px;
  }
 
- .section-head h2 {
+ .service-head h2 {
+     font-family: 'Poppins', sans-serif;
      font-size: 45px;
-     font-weight: 800;
-     color: #232323;
+     font-weight: 700;
+     color: #1a1a1a;
+     letter-spacing: 0.2px;
      margin-bottom: 10px;
-     line-height: 1.1;
+
  }
 
- .section-head p {
+ .service-head p {
      font-size: 22px;
      color: #555;
      margin: 0;
+     margin-bottom: -20px;
  }
 
  .section-head strong {
@@ -670,6 +674,16 @@
  .service-box {
      display: flex;
      align-items: flex-start;
+     transition: all 0.35s ease;
+     cursor: pointer;
+ }
+
+ .service-box:hover {
+     transform: translateY(-8px);
+     background-color: #FCD79C;
+     padding: 20px;
+     border-radius: 30px;
+     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
  }
 
  .services-left .service-box {
@@ -717,6 +731,11 @@
      color: #222;
  }
 
+ .service-box:hover .service-number {
+     background: #111;
+     color: #fff;
+ }
+
  .services-left .service-number {
      margin-left: 18px;
  }
@@ -726,7 +745,6 @@
  }
 
  /* CENTER */
-
  .services-center {
      display: flex;
      justify-content: center;
@@ -734,27 +752,38 @@
  }
 
  .building-slider {
-     width: 100%;
-     height: 620px;
+     width: 420px;
+     height: 560px;
+     overflow: hidden;
  }
 
- .building-slide {
-     height: 620px;
-     display: flex !important;
-     justify-content: center;
-     align-items: center;
+ .building-slider .slick-list {
+     height: 560px !important;
+     overflow: hidden;
  }
 
- .building-slide img {
-     width: 100%;
-     max-width: 420px;
+ .building-slider .slick-track {
      display: block;
  }
 
- .building-slider .slick-track,
- .building-slider .slick-list {
-     height: 100%;
+ .building-slide {
+     height: 560px !important;
+
+     display: flex !important;
+     align-items: center;
+     justify-content: center;
  }
+
+ .building-slide img {
+     max-width: 420px;
+     max-height: 520px;
+     width: auto;
+     height: auto;
+     object-fit: contain;
+     display: block;
+ }
+
+
 
  .dream-section {
      display: flex;
@@ -838,445 +867,388 @@
      display: block;
  }
 
-
  .gallery-section {
-     background: #f4f4f4;
-     padding: 80px 0 70px;
-     overflow: hidden;
-     position: relative;
- }
-
- /* ══════════════════════════════════
-           GALLERY SECTION
-        ══════════════════════════════════ */
- .gallery-section {
-     background: #fff;
-     padding: 64px 0 60px;
+     background: #ffffff;
+     padding: 10px 0;
      overflow: hidden;
  }
 
- /* ── Header ── */
+ /* HEADER */
+
  .gallery-header {
      text-align: center;
-     max-width: 680px;
-     margin: 0 auto 52px;
-     padding: 0 24px;
+     max-width: 900px;
+     margin: 0 auto 50px;
  }
 
  .gallery-header h2 {
-     font-size: 34px;
+     font-family: 'Poppins', sans-serif;
+     font-size: 45px;
      font-weight: 700;
-     color: #2c2c2c;
-     margin-bottom: 14px;
-     letter-spacing: -0.3px;
+     color: #1a1a1a;
+     letter-spacing: 0.2px;
+     margin-bottom: 10px;
+     text-align: center;
  }
 
  .gallery-header p {
-     font-size: 17px;
+     font-size: 18px;
      line-height: 1.6;
      color: #555;
-     font-weight: 400;
  }
 
- .gallery-header p strong {
-     font-weight: 700;
-     color: #2c2c2c;
- }
+ /* CURVED CONTAINER */
 
- /* ══════════════════════════════════
-           GALLERY TRACK
-           5 items: partial-left | big-center | before/after-stack | partial-right
-           Overflow hidden on wrapper clips the partials
-        ══════════════════════════════════ */
- .gallery-mask {
+ .gallery-curved-wrap {
      width: 100%;
+     height: 760px;
      overflow: hidden;
+     background-color: #ffffff;
      position: relative;
+
+     clip-path: polygon(0% 10%,
+             10% 16%,
+             25% 20%,
+             50% 22%,
+             75% 20%,
+             90% 16%,
+             100% 10%,
+
+             100% 90%,
+             90% 84%,
+             75% 80%,
+             50% 78%,
+             25% 80%,
+             10% 84%,
+             0% 90%);
+
+     -webkit-clip-path: polygon(0% 10%,
+             10% 16%,
+             25% 20%,
+             50% 22%,
+             75% 20%,
+             90% 16%,
+             100% 10%,
+
+             100% 90%,
+             90% 84%,
+             75% 80%,
+             50% 78%,
+             25% 80%,
+             10% 84%,
+             0% 90%);
  }
 
+ /* TRACK */
  .gallery-track {
      display: flex;
+     align-items: flex-end;
+     /* important */
+     gap: 42px;
+     width: max-content;
+     animation: galleryMarquee 40s linear infinite;
      align-items: center;
-     /* vertically center shorter side items */
-     gap: 20px;
-     /* negative margins pull partials off-screen on each side */
-     padding: 0;
-     margin-left: -110px;
-     margin-right: -110px;
+     gap: 40px;
+     padding-top: 20px;
  }
 
- /* ── Base gallery item ── */
+ /* ITEMS */
+
  .gallery-item {
      flex-shrink: 0;
-     overflow: hidden;
-     position: relative;
  }
 
- /* ── PARTIAL LEFT — clipped on right side with curved inner edge ── */
- .gallery-item--left-partial {
-     width: 230px;
-     height: 400px;
-     border-radius: 0 28% 28% 0 / 0 50% 50% 0;
-     /* flat left edge (at viewport bleed), curved right edge toward center */
- }
-
- .gallery-item--left-partial img {
+ .gallery-item img {
      width: 100%;
      height: 100%;
      object-fit: cover;
-     object-position: right center;
      display: block;
  }
 
- /* ── CENTER BIG IMAGE ── */
- .gallery-item--center {
+ /* SIDE */
+
+
+ .side-img {
      width: 420px;
-     height: 430px;
-     border-radius: 16px;
-     flex-shrink: 0;
+     height: 720px;
  }
 
- .gallery-item--center img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     display: block;
+ /* LARGE */
+
+ .large-img {
+     width: 560px;
+     height: 620px;
  }
 
- /* ── BEFORE / AFTER STACK ── */
- .gallery-item--ba-stack {
+ /* BEFORE AFTER */
+
+ .before-after {
+     width: 430px;
+     height: 620px;
+
      display: flex;
      flex-direction: column;
-     gap: 14px;
+     gap: 10px;
+
      flex-shrink: 0;
-     width: 420px;
  }
 
  .ba-card {
+     flex: 1;
      position: relative;
-     width: 100%;
-     height: 204px;
-     border-radius: 14px;
-     overflow: hidden;
  }
 
- .ba-card img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     display: block;
- }
-
- .ba-label {
+ .ba-card span {
      position: absolute;
-     bottom: 14px;
-     left: 16px;
-     font-size: 15px;
-     font-weight: 700;
+     left: 20px;
+     bottom: 20px;
+
      color: #fff;
-     letter-spacing: 0.5px;
-     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+     font-size: 22px;
+     font-weight: 700;
  }
 
- /* ── PARTIAL RIGHT — clipped on left side with curved inner edge ── */
- .gallery-item--right-partial {
-     width: 230px;
-     height: 400px;
-     border-radius: 28% 0 0 28% / 50% 0 0 50%;
-     /* curved left edge toward center, flat right edge at viewport bleed */
- }
+ /* BUTTON */
 
- .gallery-item--right-partial img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     object-position: left center;
-     display: block;
- }
-
- /* ── View More Button ── */
  .gallery-btn-wrap {
      text-align: center;
-     margin-top: 48px;
+     margin-top: -20px;
  }
 
  .gallery-btn {
      display: inline-flex;
      align-items: center;
-     gap: 10px;
-     background: #f5e4b0;
-     border: 1.5px solid #e8c87a;
-     border-radius: 50px;
-     padding: 13px 28px 13px 32px;
+     gap: 12px;
+
+     padding: 14px 32px;
+
+     background: #e8c57a;
+     border-radius: 999px;
+
      text-decoration: none;
-     color: #2a1f05;
-     font-size: 15px;
+     color: #111;
+
+     font-size: 20px;
      font-weight: 500;
-     font-family: 'Inter', sans-serif;
-     transition: background 0.2s, transform 0.15s;
  }
 
- .gallery-btn:hover {
-     background: #efd98a;
-     transform: translateY(-2px);
+ .gallery-btn-icon {
+     font-size: 20px;
  }
 
- .gallery-btn .btn-icon {
-     width: 28px;
-     height: 28px;
-     background: rgba(232, 200, 122, 0.55);
-     border-radius: 50%;
-     display: flex;
-     align-items: center;
-     justify-content: center;
- }
+ /* MARQUEE */
 
- .gallery-btn .btn-icon svg {
-     width: 13px;
-     height: 13px;
-     stroke: #2a1f05;
-     stroke-width: 2.2;
-     fill: none;
- }
+ @keyframes galleryMarquee {
 
- /* ── Responsive ── */
- @media (max-width: 960px) {
-
-     .gallery-item--left-partial,
-     .gallery-item--right-partial {
-         width: 140px;
+     from {
+         transform: translateX(0);
      }
 
-     .gallery-item--center,
-     .gallery-item--ba-stack {
-         width: 320px;
-     }
-
-     .gallery-item--center {
-         height: 340px;
-     }
-
-     .ba-card {
-         height: 160px;
+     to {
+         transform: translateX(-50%);
      }
  }
 
- @media (max-width: 700px) {
+ /* ===========================
+   ABOUT SECTION
+=========================== */
+ /* Outer Frame to match the thin wireframe border in your image */
+ .page-frame {
+     position: relative;
+     width: 100%;
+     /* max-width: 1200px; */
+     border: 1px solid #d1d1d1;
+     border-top: none;
+     /* Open top as per image */
+     border-bottom-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+     padding: 10px 60px 80px 60px;
+     background-color: #fff;
+ }
 
-     .gallery-item--left-partial,
-     .gallery-item--right-partial {
-         display: none;
-     }
+ /* Architectural Side Lines */
+ .side-line {
+     position: absolute;
+     top: 0;
+     bottom: 40px;
+     width: 1px;
+     background-color: #7a7a7a;
+ }
 
-     .gallery-track {
-         flex-direction: column;
-         margin: 0;
-         padding: 0 24px;
-         align-items: stretch;
-     }
+ .line-left-1 {
+     left: 15px;
+     height: 60%;
+     width: 2px;
+     background-color: #7a7a7a;
+ }
 
-     .gallery-item--center,
-     .gallery-item--ba-stack {
-         width: 100%;
-     }
+ .line-left-2 {
+     left: 35px;
+     height: 70%;
+     width: 2px;
+ }
 
-     .gallery-item--center {
-         height: 280px;
-     }
+ .line-left-3 {
+     left: 55px;
+     height: 80%;
+     width: 2px;
+ }
+
+ .line-right-1 {
+     right: 15px;
+     height: 60%;
+     width: 2px;
+ }
+
+ .line-right-2 {
+     right: 35px;
+     height: 70%;
+     width: 2px;
+ }
+
+ .line-right-3 {
+     right: 55px;
+     height: 70%;
+     width: 2px;
 
  }
 
- /* ══════════════════════════════════
-           ABOUT SECTION WRAPPER
-           Outer border card on white bg
-        ══════════════════════════════════ */
- .about-section {
-     padding: 40px 48px 48px;
-     background: #fff;
- }
-
- /* ── "About Us" heading above card ── */
- .about-section__title {
-     text-align: center;
-     margin-bottom: 24px;
- }
-
- .about-section__title h2 {
-     font-size: 22px;
+ /* Section Title */
+ .section-title {
+     font-family: 'Poppins', sans-serif;
+     font-size: 45px;
      font-weight: 700;
      color: #1a1a1a;
-     letter-spacing: -0.2px;
+     letter-spacing: 0.2px;
+     margin-bottom: 10px;
+     text-align: center;
  }
 
- /* ── Outer border wrapper ── */
- .about-section__frame {
-     border: 1px solid #d9d9d9;
-     border-radius: 20px;
-     padding: 14px;
-     background: #fff;
- }
-
- /* ══════════════════════════════════
-           INNER AMBER CARD
-           — contains left text + right image
-           — image overflows the card top
-        ══════════════════════════════════ */
- .about-card {
-     background: #f9c96a;
-     border-radius: 18px;
+ /* The Main Yellow Banner */
+ .banner {
+     background-color: #FCE1AA;
+     /* Exact peach/yellow color from image */
+     border-radius: 50px;
+     position: relative;
      display: flex;
      align-items: stretch;
-     position: relative;
-     overflow: visible;
-     /* let image overflow the top */
-     min-height: 440px;
+     min-height: 480px;
+     margin-left: 2%;
+     margin-right: 2%;
  }
 
- /* ── LEFT: text content ── */
- .about-card__left {
-     width: 42%;
-     flex-shrink: 0;
-     padding: 52px 40px 48px 52px;
+ /* Left Content Area (Text) */
+ .content-left {
+     width: 50%;
+     padding: 60px 0 60px 60px;
      display: flex;
      flex-direction: column;
      justify-content: center;
-     position: relative;
      z-index: 2;
  }
 
- .about-card__heading {
-     font-size: 36px;
+ .main-heading {
+     font-size: 34px;
+     font-weight: 900;
+     line-height: 1.4;
+     color: #1a1a1a;
+     margin-bottom: 30px;
+     letter-spacing: 1px;
+ }
+
+ .description {
+     font-size: 15px;
+     line-height: 1.6;
+     color: #2c2c2c;
+     margin-bottom: 45px;
+     max-width: 90%;
+ }
+
+ .description strong {
      font-weight: 800;
-     color: #111;
-     line-height: 1.15;
-     text-transform: uppercase;
-     letter-spacing: -0.5px;
-     margin-bottom: 36px;
  }
 
- .about-card__body {
-     font-size: 15.5px;
-     line-height: 1.7;
-     color: #3a3a3a;
-     margin-bottom: 36px;
-     max-width: 400px;
- }
-
- .about-card__body strong {
-     font-weight: 700;
-     color: #111;
- }
-
- /* ── View More button ── */
- .about-card__btn {
+ /* Recreating the exact Button Style */
+ .view-more-btn {
      display: inline-flex;
      align-items: center;
-     gap: 0;
-     background: #fff;
-     border: 1.5px solid #c8c8c8;
-     border-radius: 50px;
-     padding: 10px 10px 10px 22px;
-     text-decoration: none;
-     color: #1a1a1a;
+     align-self: flex-start;
+     background-color: #FCE1AA;
+     border: 3px solid #ffffff;
+     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4);
+     /* Inner glow effect */
+     border-radius: 40px;
+     padding: 8px 10px 8px 24px;
      font-size: 14px;
-     font-weight: 500;
-     width: fit-content;
-     transition: border-color 0.2s, transform 0.15s;
+     font-weight: 700;
+     color: #1a1a1a;
+     cursor: pointer;
+     text-decoration: none;
+     transition: all 0.3s ease;
  }
 
- .about-card__btn:hover {
-     border-color: #e8c87a;
-     transform: translateY(-1px);
+ .view-more-btn:hover {
+     background-color: #ffffff;
  }
 
- .about-card__btn-text {
-     margin-right: 14px;
- }
-
- .about-card__btn-icon {
-     width: 30px;
-     height: 30px;
-     background: #f5e4b0;
+ .icon-circle {
+     background-color: #ffffff;
+     width: 28px;
+     height: 28px;
      border-radius: 50%;
      display: flex;
      align-items: center;
      justify-content: center;
-     flex-shrink: 0;
+     margin-left: 15px;
+     color: #d8b87a;
+     font-size: 16px;
+     font-weight: bold;
  }
 
- .about-card__btn-icon svg {
-     width: 13px;
-     height: 13px;
-     stroke: #2a1f05;
-     stroke-width: 2.2;
-     fill: none;
- }
-
- /* ── RIGHT: building image ── */
- .about-card__right {
-     flex: 1;
-     position: relative;
-     /* image overflows card top — achieved via absolute positioning */
- }
-
- .about-card__img-wrap {
+ /* Right Content Area (Image Pop-out Setup) */
+ .content-right {
      position: absolute;
-     bottom: 0;
-     right: 0;
-     width: 105%;
-     /* slightly wider than the right column */
-     height: calc(100% + 40px);
-     /* overflow 40px above card top */
+     right: -3px;
+     /* Pushes image slightly outside the right edge */
+     bottom: -40px;
+     /* Pushes image slightly outside the bottom edge */
+     width: 55%;
+     height: 115%;
+     /* Makes container larger than the banner */
+     display: flex;
+     align-items: flex-end;
+     justify-content: flex-end;
+     z-index: 3;
+     pointer-events: none;
+     /* Prevents image bounding box from blocking clicks */
  }
 
- .about-card__img-wrap img {
+ .content-right img {
      width: 100%;
-     height: 100%;
+     height: auto;
      object-fit: contain;
-     object-position: right bottom;
-     display: block;
+     filter: drop-shadow(-15px 25px 20px rgba(0, 0, 0, 0.2));
+     /* Adds realistic shadow to transparent PNG */
  }
 
- /* ── Responsive ── */
- @media (max-width: 900px) {
-     .about-section {
-         padding: 32px 24px 40px;
-     }
-
-     .about-card {
+ /* Responsive Adjustments */
+ @media (max-width: 992px) {
+     .banner {
          flex-direction: column;
-         overflow: hidden;
+         min-height: auto;
      }
 
-     .about-card__left {
+     .content-left {
          width: 100%;
-         padding: 40px 32px 32px;
+         padding: 50px;
      }
 
-     .about-card__right {
-         height: 300px;
+     .content-right {
          position: relative;
-     }
-
-     .about-card__img-wrap {
-         position: static;
-         width: 100%;
-         height: 100%;
-     }
-
-     .about-card__img-wrap img {
-         object-fit: cover;
-         object-position: center top;
-     }
- }
-
- @media (max-width: 600px) {
-     .about-card__heading {
-         font-size: 28px;
-     }
-
-     .about-card__body {
-         font-size: 14px;
+         width: 90%;
+         right: 0;
+         bottom: -20px;
+         margin: 0 auto;
      }
  }
 
