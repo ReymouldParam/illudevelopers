@@ -121,9 +121,9 @@
  }
 
  .stat-label {
-     font-size: 12px;
+     font-size: 16px;
      font-style: italic;
-     color: rgba(255, 255, 255, 0.48);
+     color: #e8c87a;
      margin-top: 5px;
      letter-spacing: 0.2px;
  }
@@ -168,18 +168,17 @@
 
      cursor: pointer;
 
-     transition: transform .2s ease;
- }
-
- .btn-cta-pill:hover {
-     transform: translateX(-4px);
+     transition: transform 0.4s ease,
+         box-shadow 0.4s ease;
  }
 
  .btn-cta-pill .btn-text {
      flex: 1;
      height: 100%;
+
      background: #F3CF8E;
      border-radius: 40px;
+
      display: flex;
      align-items: center;
      justify-content: center;
@@ -188,6 +187,9 @@
      font-size: 16px;
      font-weight: 600;
      color: #000;
+
+     transition: background-color 0.4s ease,
+         color 0.4s ease;
  }
 
  .btn-cta-pill .arrow-circle {
@@ -202,16 +204,43 @@
      justify-content: center;
 
      flex-shrink: 0;
+
+     transition: transform 0.4s ease;
  }
 
  .btn-cta-pill .arrow-circle svg {
      width: 18px;
      height: 18px;
+
      fill: none;
      stroke: #F3CF8E;
      stroke-width: 2;
      stroke-linecap: round;
      stroke-linejoin: round;
+
+     transition: transform 0.4s ease,
+         stroke 0.4s ease;
+ }
+
+ /* Hover Effects */
+ .btn-cta-pill:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+ }
+
+ .btn-cta-pill:hover .btn-text {
+     background: #000;
+     color: #fff;
+ }
+
+ .btn-cta-pill:hover .arrow-circle {
+     transform: translateX(-4px);
+     stroke: #000000;
+ }
+
+ .btn-cta-pill:hover .arrow-circle svg {
+     transform: rotate(-45deg);
+     stroke: #000000;
  }
 
  /* ════════════════════════════

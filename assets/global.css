@@ -294,11 +294,13 @@
      justify-content: space-between;
 
      cursor: pointer;
+
+     transition: transform 0.4s ease,
+         box-shadow 0.4s ease;
  }
 
  .btn-contact .btn-text {
      flex: 1;
-
      height: 100%;
 
      background: #F3CF8E;
@@ -312,6 +314,9 @@
      font-size: 16px;
      font-weight: 600;
      color: #000;
+
+     transition: background-color 0.4s ease,
+         color 0.4s ease;
  }
 
  .btn-contact .arrow-circle {
@@ -326,6 +331,8 @@
      justify-content: center;
 
      flex-shrink: 0;
+
+     transition: transform 0.4s ease;
  }
 
  .btn-contact .arrow-circle svg {
@@ -337,6 +344,30 @@
      stroke-width: 2;
      stroke-linecap: round;
      stroke-linejoin: round;
+
+     transition: transform 0.4s ease,
+         stroke 0.4s ease;
+ }
+
+ /* HOVER */
+ .btn-contact:hover {
+     /* transform: translateY(-3px); */
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+ }
+
+ .btn-contact:hover .btn-text {
+     background: #000;
+     color: #fff;
+ }
+
+ .btn-contact:hover .arrow-circle {
+     transform: translateX(-4px);
+ }
+
+ .btn-contact:hover .arrow-circle svg {
+     transform: rotate(-45deg);
+     stroke: #000000;
+     margin-left: 4px;
  }
 
  /* ══════════════════════════════════
