@@ -260,11 +260,12 @@
 
     .footer__form {
         flex-direction: column;
+        height: 70px;
     }
 
-    .footer__input,
     .footer__btn {
         width: 100%;
         max-width: 100%;
+        height: 30px;
     }
 }
