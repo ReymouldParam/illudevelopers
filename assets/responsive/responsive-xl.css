@@ -1,0 +1,32 @@
+@media (min-width: 1920px) {
+
+    .difference-container,
+    .testimonial-section {
+        max-width: 1600px;
+    }
+
+    .services-layout {
+        max-width: 1800px;
+    }
+
+    .headline-upper {
+        font-size: 88px;
+    }
+
+    .headline-script {
+        font-size: 140px;
+    }
+
+    .house-image-wrap {
+        width: 68%;
+        right: 10%;
+    }
+
+    .hero-content {
+        max-width: 480px;
+    }
+
+    .projects-slider {
+        padding: 0 120px;
+    }
+}

@@ -1,0 +1,270 @@
+@media (max-width: 767px) {
+
+    /* ── Header ── */
+    .banner-header {
+        padding: 16px 20px;
+        height: 64px;
+    }
+
+    .nav-pill {
+        display: none;
+    }
+
+    .btn-contact {
+        width: 160px;
+        height: 48px;
+    }
+
+    .btn-contact .btn-text {
+        font-size: 14px;
+    }
+
+    .logo-text-group img {
+        max-height: 36px;
+        width: auto;
+    }
+
+    /* ── Hero ── */
+    .banner-section {
+        min-height: 100svh;
+    }
+
+    .hero-content {
+        left: 20px;
+        right: 20px;
+        max-width: none;
+        top: 38%;
+        transform: translateY(-38%);
+    }
+
+    .headline-upper {
+        font-size: 44px;
+        letter-spacing: 2px;
+    }
+
+    .headline-script {
+        font-size: 68px;
+        margin-top: -18px;
+    }
+
+    .tagline {
+        font-size: 14px;
+        margin-top: 16px;
+    }
+
+    .house-image-wrap {
+        width: 88%;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        height: 52%;
+    }
+
+    .right-ctas {
+        display: none;
+    }
+
+    .stats-row {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .stat-card {
+        min-width: calc(50% - 6px);
+        padding: 14px 16px;
+    }
+
+    .stat-number {
+        font-size: 22px;
+    }
+
+    /* ── Section headings ── */
+    .section-head h2,
+    .service-head h2,
+    .gallery-header h2,
+    .section-title,
+    .stories-section__heading,
+    .section-header {
+        font-size: 28px;
+    }
+
+    .section-head p,
+    .service-head p,
+    .gallery-header p {
+        font-size: 16px;
+    }
+
+    /* ── Projects ── */
+    .projects-slider {
+        padding: 0 20px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-price {
+        font-size: 24px;
+    }
+
+    .arrow-next-visual {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* ── Services ── */
+    .service-content h3 {
+        font-size: 22px;
+    }
+
+    .service-content p {
+        font-size: 15px;
+    }
+
+    .building-slider,
+    .building-slider .slick-list,
+    .building-slide {
+        width: 280px;
+        height: 360px !important;
+    }
+
+    /* ── Dream ── */
+    .dream-left {
+        padding: 48px 24px 32px;
+    }
+
+    .dream-left h2 {
+        font-size: 36px;
+    }
+
+    .dream-left p {
+        font-size: 16px;
+    }
+
+    .dream-right {
+        height: 320px;
+    }
+
+    /* ── Gallery ── */
+    .gallery-curved-wrap {
+        height: 340px;
+        clip-path: none;
+        -webkit-clip-path: none;
+    }
+
+    .gallery-track {
+        gap: 20px;
+    }
+
+    .side-img {
+        width: 200px;
+        height: 280px;
+    }
+
+    .large-img {
+        width: 240px;
+        height: 260px;
+    }
+
+    .before-after {
+        width: 200px;
+        height: 260px;
+    }
+
+    .ba-card span {
+        font-size: 16px;
+    }
+
+    /* ── About ── */
+    .page-frame {
+        padding: 10px 20px 48px;
+        border-radius: 0;
+    }
+
+    .banner {
+        border-radius: 24px;
+        min-height: auto;
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .content-left {
+        width: 100%;
+        padding: 40px 24px;
+    }
+
+    .content-right {
+        position: relative;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        height: auto;
+        padding: 0 16px 24px;
+        pointer-events: auto;
+    }
+
+    .main-heading {
+        font-size: 26px;
+    }
+
+    /* ── Difference ── */
+    .difference-section {
+        padding: 20px 16px;
+    }
+
+    .section-desc {
+        font-size: 15px;
+        margin-bottom: 32px;
+    }
+
+    .feature-content h3 {
+        font-size: 20px;
+    }
+
+    .feature-content p {
+        font-size: 14px;
+    }
+
+    /* ── Stories ── */
+    .stories-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .stories-section {
+        padding: 28px 20px;
+    }
+
+    /* ── Testimonials ── */
+    .testimonial-section {
+        padding: 20px 16px;
+    }
+
+    .testimonial-card {
+        min-height: 240px;
+        padding: 24px;
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+        padding: 32px 20px 20px;
+        border-radius: 24px 24px 0 0;
+    }
+
+    .footer__top {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer__form {
+        flex-direction: column;
+    }
+
+    .footer__input,
+    .footer__btn {
+        width: 100%;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,165 @@
+@media (max-width: 1279px) {
+
+    /* ── Hero ── */
+    .banner-section {
+        min-height: 580px;
+    }
+
+    .headline-upper {
+        font-size: 56px;
+    }
+
+    .headline-script {
+        font-size: 90px;
+        margin-top: -24px;
+    }
+
+    .hero-content {
+        left: 6%;
+        max-width: 380px;
+    }
+
+    .house-image-wrap {
+        width: 58%;
+        right: 4%;
+    }
+
+    .right-ctas {
+        right: 4%;
+    }
+
+    .btn-cta-pill {
+        width: 200px;
+        height: 52px;
+    }
+
+    /* ── Projects ── */
+    .projects-slider {
+        padding: 0 48px;
+    }
+
+    .section-head h2,
+    .service-head h2,
+    .gallery-header h2,
+    .section-title,
+    .stories-section__heading,
+    .section-header {
+        font-size: 36px;
+    }
+
+    /* ── Services: stack layout ── */
+    .services-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 var(--resp-section-pad);
+    }
+
+    .services-left,
+    .services-right {
+        height: auto;
+        position: relative;
+    }
+
+    .service-one,
+    .service-two,
+    .service-three,
+    .service-four {
+        position: static;
+        margin-bottom: 24px;
+    }
+
+    .services-left .service-box,
+    .services-right .service-box {
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    .services-left .service-number {
+        margin-left: 0;
+        margin-right: 18px;
+        order: -1;
+    }
+
+    .service-content {
+        width: 100%;
+        max-width: 520px;
+    }
+
+    .building-slider,
+    .building-slider .slick-list,
+    .building-slide {
+        width: 320px;
+        height: 420px !important;
+        margin: 0 auto;
+    }
+
+    .building-slide img {
+        max-width: 320px;
+        max-height: 400px;
+    }
+
+    /* ── Dream ── */
+    .dream-section {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .dream-left {
+        width: 100%;
+        padding: 60px 40px 40px;
+    }
+
+    .dream-left h2 {
+        font-size: 48px;
+    }
+
+    .dream-right {
+        width: 100%;
+        height: 420px;
+    }
+
+    /* ── Gallery ── */
+    .gallery-curved-wrap {
+        height: 480px;
+    }
+
+    .side-img {
+        width: 260px;
+        height: 420px;
+    }
+
+    .large-img {
+        width: 340px;
+        height: 380px;
+    }
+
+    .before-after {
+        width: 280px;
+        height: 380px;
+    }
+
+    /* ── About frame ── */
+    .page-frame {
+        padding: 10px 32px 60px;
+    }
+
+    .side-line {
+        display: none;
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+        padding: 36px 32px 24px;
+    }
+
+    .footer__top {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .footer__right {
+        grid-column: 1 / -1;
+        align-items: flex-start;
+        text-align: left;
+    }
+}

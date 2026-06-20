@@ -1011,29 +1011,67 @@
  /* BUTTON */
 
  .gallery-btn-wrap {
-     text-align: center;
-     margin-top: -20px;
+     display: flex;
+     justify-content: center;
  }
 
+ /* OUTER CAPSULE */
  .gallery-btn {
-     display: inline-flex;
+     width: 230px;
+     height: 56px;
+
+     display: flex;
      align-items: center;
-     gap: 12px;
 
-     padding: 14px 32px;
+     padding: 4px;
 
-     background: #e8c57a;
+     background: #fff;
      border-radius: 999px;
 
      text-decoration: none;
-     color: #111;
 
-     font-size: 20px;
-     font-weight: 500;
+     box-shadow:
+         0 3px 0 rgba(0, 0, 0, 0.10),
+         0 6px 12px rgba(0, 0, 0, 0.05);
  }
 
+ /* GOLD SECTION */
+ .gallery-btn-text {
+     flex: 1;
+     height: 48px;
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     background: #EAC57A;
+     border-radius: 999px;
+
+     color: #000;
+     font-size: 18px;
+     font-weight: 500;
+     letter-spacing: 0;
+ }
+
+ /* RIGHT CIRCLE */
  .gallery-btn-icon {
-     font-size: 20px;
+     width: 48px;
+     height: 48px;
+
+     flex-shrink: 0;
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     background: #fff;
+     border-radius: 50%;
+
+     color: #EAC57A;
+     font-size: 24px;
+     font-weight: 400;
+
+     transform: translateX(-1px);
  }
 
  /* MARQUEE */
